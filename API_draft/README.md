@@ -37,13 +37,13 @@
 ### Modules from Annex B:
 
 * MachineLearning Module
-  * `class StarGalaxyQSOClassifier`:
+  * `class StarGalaxyQSOClassifier`
     *  Method: `fit()`: Train the model
     *  Method: `predict()`: Predict the classifications  
     *  Method: `predict_proba()`: Predict the classification probabilities
 
 * Interactive Visualization Module:
-  *  `class VisInteractive`:
+  *  `class VisInteractive`
   *  Method: `plotregion(region)` : Plot region specified by user
   *  Method: `quantflux()` : Quantify the flux of spectral lines
 
