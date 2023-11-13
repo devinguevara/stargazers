@@ -1,0 +1,6 @@
+name: Coverage Report 
+
+on : 
+	push: 
+		branches:
+      - main
