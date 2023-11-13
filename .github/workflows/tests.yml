@@ -1,0 +1,7 @@
+name: Tests Workflow 
+
+on : 
+  push: 
+    branches:
+      - main
+
