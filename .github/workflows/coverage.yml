@@ -29,7 +29,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-        working-directory: /
       - name: Run MetadataExtractor test coverage analysis
         run: pytest -vv test_metadata_extractor.py --cov --cov-report=html:metadata_extractor_htmlcov
         working-directory: tests
