@@ -1,11 +1,4 @@
-"""
-Query gaia to extract information for an object inputted by the user. 
 
-
-This module contains the GaiaPipeline class, which is used to query the Gaia.
-Object must be a denomination in the Gaia data table. A flag can be set to
-print a plot of the epoch vs g_mag for the object.
-"""
 import pandas as pd 
 from astroquery.sdss import SDSS
 
