@@ -45,22 +45,3 @@ def test_print(query_fixture, capsys):
     assert(stdout != None)
 
 
-
-
-if __name__ == "__main__":
-    # Example ADQL query (you can replace this with your own query)
-    sample_query = """
-    SELECT
-        TOP 10
-        p.objID, p.ra, p.dec, p.u, p.g, p.r, p.i, p.z
-    FROM
-        PhotoObj AS p
-    WHERE
-        p.u BETWEEN 0 AND 19.6
-    """
-    query = Query(sample_query)
-    df = query.get_df()
-    if isinstance(df, pd.DataFrame): 
-        print(df)
-    else: 
-        print('ok df method failed')
