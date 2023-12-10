@@ -14,7 +14,16 @@ class Query():
 
     def __init__(self, ADQL_string : str): 
         self.ADQL_string = ADQL_string
-            
+        try:
+            from astroquery.sdss import SDSS
+            import pandas as pd
+            self.SDSS = SDSS
+            self.pandas = pd
+        except ImportError:
+            print("Please install the required libraries using:")
+            print("pip install astroquery pandas")
+            # You may exit the program or take appropriate action based on your use case
+            exit(1)        
 
     
     def get_df(self): 
