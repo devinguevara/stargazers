@@ -4,9 +4,16 @@ import numpy as np
 import pandas as pd
 import differint.differint as differint
 import pytest 
-from augment import Augment
 from unittest.mock import patch
 from _pytest.monkeypatch import MonkeyPatch
+
+import sys
+import os
+
+sys.path.insert(
+    0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+)
+from augment import Augment
 
 
 def test_Augment(): 
