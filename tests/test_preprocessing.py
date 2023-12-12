@@ -22,6 +22,7 @@ data = {
 
 df = pd.DataFrame(data)
 
+
 @pytest.fixture
 def pp_fixture(): 
     return Preprocessing(df)
@@ -34,13 +35,62 @@ class TestNormalize:
         #make sure that the pp_fixture.data hasnt changed 
         n_df = pp_fixture.normalize()
         assert pp_fixture.data.equals(df)
+        assert(n_df['u'].max() <= 1)    
 
-        
-    
-    #def test replace 
+    #def test replace
+    def test_replace(self, pp_fixture): 
+
+        pp_fixture.normalize(replace = True)
+        assert not pp_fixture.data.equals(df) 
+
 
 
 #class TestRmOutlier: 
+class TestRmOutlier: 
+
+    def test_no_replace(self, pp_fixture):
+        n_df = pp_fixture.rm_outlier()
+        #make sure the new df doesn't equal original 
+        assert not n_df.equals(df)
+        assert pp_fixture.data.equals(df)
+
+    def test_replace(self, pp_fixture): 
+        pp_fixture.rm_outlier(replace = True)
+        assert not pp_fixture.data.equals(df) 
+
+
+
+
+
+
+#class TestInterpolate 
+class TestInterpolate: 
+
+    def test_no_replace(self, pp_fixture):
+        n_df = pp_fixture.interpolate([13, 14, 15], y_col = 'z', x_col='ra', replace =False)
+        assert len(n_df.columns) is 2
+
+    def test_replace(self, pp_fixture): 
+        pp_fixture.interpolate([13, 14, 15], y_col = 'z', x_col='ra', replace =True)
+        assert not pp_fixture.data.equals(df)
+
+
+'''
+class TestGetRedshiftCorr: 
+
+    def test_calculation(self, pp_fixture): 
+        corr = pp_fixture.get_redshift_corr(col='z')
+        assert corr == 1.0
+    
+    def test_no_z(self):
+        df2 = df.drop(columns='z')
+        proc = Preprocessing(df2)
+
+        with pytest.raises(ValueError): 
+            proc.get_redshift_corr(col = 'dec')
+        
+    
+            '''
 
 
 
@@ -50,7 +100,7 @@ class TestNormalize:
     
 
 
-#create your test_rm_outlier
+
 
  
 
