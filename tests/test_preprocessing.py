@@ -44,8 +44,6 @@ class TestNormalize:
         assert not pp_fixture.data.equals(df) 
 
 
-
-
 #class TestRmOutlier: 
 class TestRmOutlier: 
 
@@ -58,13 +56,6 @@ class TestRmOutlier:
     def test_replace(self, pp_fixture): 
         pp_fixture.rm_outlier(replace = True)
         assert not pp_fixture.data.equals(df) 
-
-
-
-
-
-
-    
 
 
 
