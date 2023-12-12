@@ -81,6 +81,20 @@ class TestInterpolate:
 
 
 
+class TestGetRedshiftCorr: 
+
+    def test_calculation(self, pp_fixture): 
+        corr = pp_fixture.get_redshift_corr(col='z')
+        assert corr == 1.0
+
+    def test_no_z(self):
+        df2 = df.drop(columns='z')
+        proc = Preprocessing(df2)
+
+        with pytest.raises(ValueError): 
+            proc.get_redshift_corr(col = 'dec')
+        
+    
 
 
 
