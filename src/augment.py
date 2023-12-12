@@ -59,8 +59,10 @@ class Augment:   # accept a processed pd dataframe
 	
 	def fractional_derive(self, frac, run=None, notrun=None, domain_start=0, domain_end=1):
 		''' Get fractional differintegral (using 'improved' GL fractional derivative) for timeseries provided in pre-processed Pandas dataframe; 
-		return an augmented Pandas Dataframe. 
+		 return an augmented Pandas Dataframe. 
 		
+		 Required argument: frac, the order of the differintegral to be computed.
+
 		 Takes optional arguments "run" and "notrun", which must be lists [or single values] of string columnames for 
 		 columns which you do/do not want to calculate the differintegral for. By default, all columns will be differentiated.
          Also takes optional arguments "domain_start" and "domain_end" to diffint() GLI function; if not specified, defaults (0 and 1)
