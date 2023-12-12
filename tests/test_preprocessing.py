@@ -64,8 +64,23 @@ class TestRmOutlier:
 
 
 
-
     
+
+
+
+#class TestInterpolate 
+class TestInterpolate: 
+
+    def test_no_replace(self, pp_fixture):
+        n_df = pp_fixture.interpolate([13, 14, 15], y_col = 'z', x_col='ra', replace =False)
+        assert len(n_df.columns) is 2
+
+    def test_replace(self, pp_fixture): 
+        pp_fixture.interpolate([13, 14, 15], y_col = 'z', x_col='ra', replace =True)
+        assert not pp_fixture.data.equals(df)
+
+
+
 
 
 
