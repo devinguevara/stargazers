@@ -94,6 +94,11 @@ class TestGetRedshiftCorr:
         with pytest.raises(ValueError): 
             proc.get_redshift_corr(col = 'dec')
         
+    def test_incorrect_col(self, pp_fixture): 
+
+        with pytest.raises(ValueError): 
+            pp_fixture.get_redshift_corr(col = 'invalidcolumn')
+
     
 
 
