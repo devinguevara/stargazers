@@ -1,0 +1,7 @@
+numpy
+pandas
+differint 
+unittest
+pytest
+sys
+os
