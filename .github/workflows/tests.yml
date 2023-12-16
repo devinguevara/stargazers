@@ -11,7 +11,7 @@ on:
       - main
       - dev
       
-  jobs:
+jobs:
   test_augment:
     name: Run Test Suites
     runs-on: ubuntu-latest
