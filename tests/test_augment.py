@@ -21,7 +21,7 @@ import os
 sys.path.insert(
     0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
 )
-from augment import Augment
+from cs107stargazers.augment import Augment
 
 
 def test_Augment(): 
