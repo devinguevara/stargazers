@@ -1,5 +1,4 @@
 import numpy as np
-from query.py import Query
 
 class SpectrumAlignment:
     def __init__(self, query_obj):
