@@ -1,0 +1,42 @@
+name: Coverage Report
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  test_coverage_analysis_for_cs107stargazers_package:
+    name: Run Test Coverage Analysis
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the head of branch
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      # Setup Python environment in the container
+      # See: https://github.com/actions/setup-python
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run MetadataExtractor test coverage analysis
+        run: pytest -vv test_metadata_extractor.py --cov --cov-report=html:metadata_extractor_htmlcov
+        working-directory: tests
+      #
+      # more test coeverage analysis will go here
+      #
+      - name: Archive coverage reports as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: metadata-extractor-coverage-report
+          path: tests/metadata_extractor_htmlcov/
