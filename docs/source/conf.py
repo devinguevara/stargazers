@@ -32,7 +32,12 @@ release = "v0.0.3"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+# Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+# ones.
+extensions = [
+    "sphinx.ext.autodoc",  # auto-generate documentation from docstrings
+]
 
 templates_path = ["_templates"]
 exclude_patterns = []
