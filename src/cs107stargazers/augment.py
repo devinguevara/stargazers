@@ -1,4 +1,21 @@
-"""Augment Module"""
+"""
+The `augment` module is designed for time series analysis, specifically focusing on the computation of derivatives and fractional derivatives (differintegrals) of time series data. It primarily consists of the Augment class, which offers encapsulated functions for these computations on Pandas DataFrames.
+
+Key Features:
+- Compute standard time series derivatives using the `derive` method of the Augment class.
+- Compute fractional derivatives (differintegrals) using the `fractional_derive` method.
+- Flexible handling of data columns, allowing selective computation of derivatives on specific subsets of the data.
+
+Note:
+- The module assumes the input data is pre-processed and formatted as a Pandas DataFrame.
+- The accuracy of derivative computations may be affected by incomplete or missing data in the DataFrame.
+
+Dependencies:
+- numpy
+- pandas
+- differint
+"""
+
 
 # required / dependency
 import numpy as np
