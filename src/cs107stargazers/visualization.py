@@ -1,3 +1,27 @@
+"""
+SDSS Spectral Visualization Module
+
+This module provides tools for visualizing spectral data from the Sloan Digital Sky Survey (SDSS). 
+It includes the SDSSVis class, which is designed to facilitate easy and efficient plotting of 
+spectroscopic data. The module is built on top of the pandas and matplotlib libraries, leveraging 
+their capabilities for data handling and visualization.
+
+Classes:
+--------
+SDSSVis : A class designed for plotting SDSS spectroscopic data. It provides methods to plot 
+spectral data and overlay inferred continuum data for comparative analysis.
+
+The module expects data in the form of a pandas DataFrame with specific columns for wavelength, 
+flux, and optionally, inferred continuum. It simplifies the process of creating insightful 
+visualizations for the analysis of spectral data.
+
+Dependencies:
+-------------
+- pandas
+- matplotlib
+"""
+
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
