@@ -22,7 +22,7 @@ import os
 sys.path.insert(
     0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
 
-from ml_stargazer import Ml_stargazer
+from cs107stargazers.ml_stargazer import Ml_stargazer
 
 
 
