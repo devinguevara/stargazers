@@ -2,6 +2,5 @@ numpy
 pandas
 differint 
 pytest
-sys
 os   
 pytest-cov
