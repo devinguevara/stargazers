@@ -1,3 +1,54 @@
+"""
+SDSS Database Query Module
+
+This module is designed to facilitate querying the Sloan Digital Sky Survey (SDSS) database using
+the Astronomical Data Query Language (ADQL). It provides a simple yet powerful interface for
+astronomers and astrophysicists to retrieve astronomical data for analysis. The module leverages
+the capabilities of the 'astroquery.sdss' library and Pandas to handle and manipulate the queried data.
+
+The core of this module is the `Query` class, which allows users to execute ADQL queries and
+retrieve results in various formats, including Pandas DataFrames and Astropy Tables. This class
+handles the complexities of database connectivity and query execution, providing a user-friendly
+interface for data retrieval.
+
+Classes:
+--------
+Query : A class that encapsulates ADQL queries to the SDSS database. It provides methods to
+        execute queries and retrieve results in different formats.
+
+The module assumes that the user has basic knowledge of ADQL and the structure of the SDSS database.
+It is intended for use in astronomical research and education, providing a straightforward way to
+access one of the most comprehensive astronomical databases available.
+
+Example:
+--------
+To use this module, simply import it along with the required 'astroquery.sdss' and 'pandas' libraries.
+Create an instance of the Query class with your ADQL query, and use the provided methods to retrieve
+and manipulate the data:
+
+# Import the required libraries and this module.
+
+# Example ADQL query
+query_string = "SELECT TOP 10 * FROM specObj WHERE class = 'GALAXY'"
+
+# Create a Query instance
+query = Query(query_string)
+
+# Retrieve the result as a Pandas DataFrame
+data_frame = query.get_df()
+
+# Alternatively, retrieve the result as an Astropy Table
+astro_table = query.get_table()
+
+# Or simply print the query result
+query.print()
+
+Dependencies:
+-------------
+- astroquery
+- pandas
+"""
+
 
 import pandas as pd 
 from astroquery.sdss import SDSS
