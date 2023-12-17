@@ -1,3 +1,23 @@
+"""
+Astronomical Data Preprocessing Module
+
+This module provides a set of tools for preprocessing astronomical data, particularly from the Sloan Digital Sky Survey (SDSS). 
+It includes the 'Preprocessing' class, which offers methods for data normalization, outlier removal, interpolation, 
+and calculating redshift correlations. These methods are essential for preparing astronomical data for further analysis 
+and research. The module relies on pandas, numpy, and scikit-learn libraries to perform various data manipulation tasks.
+
+Classes:
+--------
+Preprocessing: A class for preprocessing astronomical data frames.
+
+Dependencies:
+-------------
+- pandas
+- numpy
+- sklearn
+"""
+
+
 # import the proper libraries
 import pandas as pd
 from astroquery.sdss import SDSS
