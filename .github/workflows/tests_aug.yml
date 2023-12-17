@@ -1,6 +1,6 @@
-name: Tests Workflow
+name: Tests Workflow 
 
-on:
+on:  
   push:
     branches:
       - main
@@ -10,9 +10,9 @@ on:
     branches:
       - main
       - dev
-
+      
 jobs:
-  test_cs107stargazers_package:
+  test_augment:
     name: Run Test Suites
     runs-on: ubuntu-latest
     steps:
@@ -29,9 +29,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: Run Ml_stargazer test suite
-        run: pytest -vv test_ml_stargazer.py
+      - name: Run Augment test suite
+        run: pytest -vv test_augment.py
         working-directory: tests
-      #
-      # more test suites will go here
-      #

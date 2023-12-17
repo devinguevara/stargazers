@@ -12,7 +12,7 @@ on:
       - dev
 
 jobs:
-  test_coverage_augment:
+  test_coverage_analysis_for_cs107stargazers_package:
     name: Run Test Coverage Analysis
     runs-on: ubuntu-latest
     steps:
