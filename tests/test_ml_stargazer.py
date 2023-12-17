@@ -41,8 +41,8 @@ def test_Ml_stargazer():
     JOIN
         photoObj AS p ON s.bestobjid = p.objid
     WHERE
-        s.ra BETWEEN 149.9 AND 150.1
-        AND s.dec BETWEEN 1.9 AND 2.1
+        s.ra BETWEEN 150.0 AND 150.2
+        AND s.dec BETWEEN 2.0 AND 2.2
     """
 
     # Use astroquery to execute the query
