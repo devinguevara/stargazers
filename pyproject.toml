@@ -19,7 +19,7 @@ description = "A package for Astronomical research."
 name = "cs107stargazers"
 readme = "README.md"
 requires-python = ">=3.10"
-version = "0.0.1"
+version = "0.0.2"
 
 [project.urls]
 "Bug Tracker" = "https://code.harvard.edu/CS107/team27_2023/issues"
