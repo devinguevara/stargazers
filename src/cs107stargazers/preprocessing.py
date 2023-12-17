@@ -27,12 +27,62 @@ from sklearn.neighbors import KNeighborsRegressor
 
 # create the preprocessing class
 class Preprocessing:
+    """
+    A class for preprocessing astronomical data frames.
+
+    This class provides methods for data normalization, outlier removal, interpolation, and
+    calculating redshift correlations. It is intended to work with pandas DataFrame objects
+    containing astronomical data.
+
+    Attributes:
+    -----------
+    data : pandas.DataFrame
+        The DataFrame containing the astronomical data to be processed.
+
+    Methods:
+    --------
+    normalize(replace=False):
+        Normalizes numerical columns in the data frame.
+
+    rm_outlier(replace=False, threshold=2.5):
+        Removes outliers from the data frame based on a z-score threshold.
+
+    interpolate(x_to_interpolate, y_col, x_col, n_neighbors=3, replace=False):
+        Performs k-nearest neighbors interpolation on the specified columns.
+
+    get_redshift_corr(col):
+        Calculates the correlation coefficient between a given column and the redshift.
+    """
+
     # innit self class. Basically when initialized it should take in the data you want to process and then return what you want
     def __init__(self, data: pd.DataFrame):
+        """
+        Initializes the Preprocessing object with the given data.
+
+        Parameters:
+        -----------
+        data : pandas.DataFrame
+            The DataFrame containing astronomical data to be preprocessed.
+        """
         self.data = data
 
     # define normalize
     def normalize(self, replace=False):
+        """
+        Normalizes the numerical columns in the DataFrame.
+
+        Parameters:
+        -----------
+        replace : bool, optional
+            If True, replaces the original data with the normalized data.
+
+        Returns:
+        --------
+        pandas.DataFrame or None
+            Returns a new DataFrame with normalized data if replace is False,
+            otherwise updates self.data and returns None.
+        """
+
         # for every column in self.data
         df = pd.DataFrame()
         for col in self.data.columns:
@@ -59,6 +109,24 @@ class Preprocessing:
     # define rm_outlier
 
     def rm_outlier(self, replace=False, threshold=2.5):
+        """
+        Removes outliers from the DataFrame based on a z-score threshold.
+
+        Parameters:
+        -----------
+        replace : bool, optional
+            If True, replaces the original data with the outlier-removed data.
+
+        threshold : float, optional
+            The z-score threshold used to define an outlier.
+
+        Returns:
+        --------
+        pandas.DataFrame or None
+            Returns a new DataFrame with outliers removed if replace is False,
+            otherwise updates self.data and returns None.
+        """
+
         # alright create your dummy df
         df = self.data.copy()
         # iterate through the columns
@@ -80,9 +148,39 @@ class Preprocessing:
             return df
 
     # define interpolation which is basically just making up why given x based on your already recorded data. Will be using k nearest neighbors
-    def interpolate(
-        self, x_to_interpolate: [], y_col: str, x_col: str, n_neighbors=3, replace=False
-    ):
+    def interpolate(self, x_to_interpolate, y_col, x_col, n_neighbors=3, replace=False):
+        """
+        Performs k-nearest neighbors interpolation on the specified columns.
+
+        Parameters:
+        -----------
+        x_to_interpolate : list or array-like
+            The x-values for which y-values need to be interpolated.
+
+        y_col : str
+            The column name of the dependent variable.
+
+        x_col : str
+            The column name of the independent variable.
+
+        n_neighbors : int, optional
+            The number of neighbors to use for k-nearest neighbors.
+
+        replace : bool, optional
+            If True, appends the interpolated results to self.data.
+
+        Returns:
+        --------
+        pandas.DataFrame or None
+            Returns a new DataFrame with interpolated values if replace is False,
+            otherwise updates self.data and returns None.
+
+        Raises:
+        -------
+        ValueError
+            If the specified columns are not found in the DataFrame or x_to_interpolate is empty.
+        """
+
         df = self.data
 
         # CHECK IF ARGUMENTS ARE CORRECT
@@ -122,6 +220,25 @@ class Preprocessing:
             return df_interpolate
 
     def get_redshift_corr(self, col: str):
+        """
+        Calculates the correlation coefficient between a specified column and the redshift.
+
+        Parameters:
+        -----------
+        col : str
+            The column name to calculate correlation with the redshift column 'z'.
+
+        Returns:
+        --------
+        float
+            The correlation coefficient between the specified column and redshift.
+
+        Raises:
+        -------
+        ValueError
+            If the specified column is not found or the redshift column 'z' is missing.
+        """
+
         # check if the col is valid
         if not col or col not in self.data.columns:
             raise ValueError(
