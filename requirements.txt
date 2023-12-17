@@ -3,3 +3,5 @@ pandas
 differint 
 pytest
 pytest-cov
+astroquery
+scikit-learn
