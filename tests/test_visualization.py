@@ -27,7 +27,7 @@ import pytest
 sys.path.insert(
     0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
 )
-from cs107stargazers import SDSSVis  # Replace with actual module name
+from cs107stargazers.visualization import SDSSVis  # Replace with actual module name
 
 
 @pytest.fixture
@@ -37,7 +37,8 @@ def sample_spectral_data():
     """
     return pd.DataFrame({
         "wavelength": [412, 536, 615, 748, 811],
-        "flux": [12, 25, 19, 23, 36]
+        "flux": [12, 25, 19, 23, 36],
+        "inferred_continuum": [1, 2, 3, 4, 5]
     })
 
 

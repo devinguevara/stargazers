@@ -32,6 +32,9 @@ jobs:
       - name: Run MetadataExtractor test suite
         run: pytest -vv test_metadata_extractor.py
         working-directory: tests
-      #
-      # more test suites will go here
-      #
+      - name: Run Augment test suite
+        run: pytest -vv test_augment.py
+        working-directory: tests
+      - name: Run Ml_stargazer test suite
+        run: pytest -vv test_ml_stargazer.py
+        working-directory: tests

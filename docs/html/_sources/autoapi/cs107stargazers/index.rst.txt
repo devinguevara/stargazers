@@ -1,0 +1,21 @@
+:py:mod:`cs107stargazers`
+=========================
+
+.. py:module:: cs107stargazers
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   augment/index.rst
+   metadata_extraction/index.rst
+   ml_stargazer/index.rst
+   preprocessing/index.rst
+   query/index.rst
+   spectrumalignment/index.rst
+   visualization/index.rst
+
+

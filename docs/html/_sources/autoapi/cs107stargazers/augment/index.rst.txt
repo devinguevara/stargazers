@@ -1,0 +1,90 @@
+:py:mod:`cs107stargazers.augment`
+=================================
+
+.. py:module:: cs107stargazers.augment
+
+.. autoapi-nested-parse::
+
+   The `augment` module is designed for time series analysis, specifically focusing on the computation of derivatives and fractional derivatives (differintegrals) of time series data. It primarily consists of the Augment class, which offers encapsulated functions for these computations on Pandas DataFrames.
+
+   Key Features:
+   - Compute standard time series derivatives using the `derive` method of the Augment class.
+   - Compute fractional derivatives (differintegrals) using the `fractional_derive` method.
+   - Flexible handling of data columns, allowing selective computation of derivatives on specific subsets of the data.
+
+   Note:
+   - The module assumes the input data is pre-processed and formatted as a Pandas DataFrame.
+   - The accuracy of derivative computations may be affected by incomplete or missing data in the DataFrame.
+
+   Dependencies:
+   - numpy
+   - pandas
+   - differint
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cs107stargazers.augment.Augment
+
+
+
+
+.. py:class:: Augment(df_p)
+
+
+   The Augment class provides methods for computing time series derivatives and fractional derivatives.
+
+   This class is designed to work with time series data represented in a Pandas DataFrame. It includes methods to compute
+   both standard and fractional derivatives (differintegrals) of the data. The expected input for creating an instance
+   of this class is a DataFrame with each column representing a time series for a specific variable. Rows should correspond
+   to different time points or indices. The class offers two main methods: `derive` and `fractional_derive`.
+
+   Methods:
+       derive: Computes the standard derivative of the time series. Optional parameters allow for the selection of specific
+               columns for which the derivative should be computed.
+       fractional_derive: Computes the fractional derivative (differintegral) of the time series. Requires the order of
+                          the differintegral to be specified. Optional parameters include column selection and domain settings
+                          for the differintegral computation.
+
+   Note:
+       This class assumes the input DataFrame is pre-processed and ready for derivative computations. Missing data in the
+       DataFrame may affect the ability of the methods to accurately compute derivatives.
+
+   Parameters:
+       df_p (pandas.DataFrame): A pre-processed DataFrame where each column represents a time series of a variable.
+
+   .. py:method:: derive(run=None, notrun=None)
+
+      Computes the derivative of time series data in the DataFrame.
+
+      Parameters:
+          run (list of str, optional): Column names for which the derivative is to be computed. If None, derivatives for all columns are computed.
+          notrun (list of str, optional): Column names for which the derivative should not be computed. Ignored if 'run' is specified.
+
+      Returns:
+          pandas.DataFrame: A DataFrame including original columns and their corresponding derivative columns.
+
+
+   .. py:method:: fractional_derive(frac, run=None, notrun=None, domain_start=0, domain_end=1)
+
+      Computes the fractional derivative (differintegral) of time series data in the DataFrame.
+
+      Parameters:
+          frac (float): The order of the differintegral to be computed.
+          run (list of str, optional): Column names for which the differintegral is to be computed. If None, differintegrals for all columns are computed.
+          notrun (list of str, optional): Column names for which the differintegral should not be computed. Ignored if 'run' is specified.
+          domain_start (numeric, optional): The start of the domain for the differintegral computation.
+          domain_end (numeric, optional): The end of the domain for the differintegral computation.
+
+      Returns:
+          pandas.DataFrame: A DataFrame including original columns and their corresponding differintegral columns.
+
+
+

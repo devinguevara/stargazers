@@ -1,2 +1,10 @@
+numpy
+pandas
+differint 
 pytest
 pytest-cov
+astroquery
+scikit-learn
+matplotlib
+sphinx
+sphinx-book-theme

@@ -1,0 +1,50 @@
+:py:mod:`cs107stargazers.ml_stargazer`
+======================================
+
+.. py:module:: cs107stargazers.ml_stargazer
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cs107stargazers.ml_stargazer.Ml_stargazer
+
+
+
+
+.. py:class:: Ml_stargazer(df, fit_vars)
+
+
+   Classify celestial objects as star/galaxy/QSO. (Spectra are most commonly used, but this class allows for increased flexibility of model-building
+   and prediction.) fit() fits the model to SDSS data using the variables indicated by the user to drive prediction. predict() produces classification 
+   predictions for each objectID in the df (self.df, for an ml_stargazer instance.) predict_proba() provides the probability of each of the 3 classifications for 
+   each objectid in the df. Functions wrap around scikit SGClassifier(). https://scikit-learn.org/stable/modules/sgd.html
+
+   .. py:method:: fit(ra=150, dec=2)
+
+      Fit the SDG Classifier model to labelled SDSS data. Model will be fit using as predictive variables the list indicated in 
+      self.fit_vars. Optional arguments ra and dec allow user to specify the region from which they wish the 
+      training points to be. STAR=1, GALAXY=2, OQS=3. Scikit documentation: https://scikit-learn.org/stable/modules/sgd.html
+
+
+   .. py:method:: predict(output='array')
+
+      Classify objectids in self.df into 3 groups (STAR=1, GALAXY=2, QSO=3) using the SDG Classifier model
+      self.SDGClassifer (fit using ml_stargazer.fit()). Optional argument output allows user to specify whether
+      they would like results in array or augmented df format (i.e. appending as columns to the data being analyzed.)
+
+
+   .. py:method:: predict_prob(output='separate')
+
+      Probabilistically classify objectids in self.df into 3 groups (STAR=1, GALAXY=2, QSO=3) using the SDG Classifier model
+      self.SDGClassifer (fit using ml_stargazer.fit()); output gives the probability of being in group 1, 2, or 3 for each objectid.
+      Optional argument output allows user to specify whether they would like results in array or augmented df format 
+      (i.e. appending as columns to the data being analyzed.)
+
+
+
