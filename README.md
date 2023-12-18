@@ -5,11 +5,15 @@
 
 Package Name: `cs107stargazers`
 
+Link to TestPyPI: https://test.pypi.org/project/cs107stargazers/
+
 ## Installation and Usage
 
 To install this package, run the following command in your terminal if you have python3 installed:
 
-`python3 -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ cs107stargazers`
+```
+python3 -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ cs107stargazers
+```
 
 To use this package, you may import it's modules. Detailed documentaion can be found in the `docs` folder, inside the `html` folder. To access the documentation, open the `index.html` file in your browser.
 
