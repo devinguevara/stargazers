@@ -38,3 +38,15 @@ jobs:
       - name: Run Ml_stargazer test suite
         run: pytest -vv test_ml_stargazer.py
         working-directory: tests
+
+      - name: Run Query test suite
+        run: pytest -vv test_query.py
+        working-directory: tests
+
+      - name: Run Preprocessing test suite
+        run: pytest -vv test_preprocessing.py
+        working-directory: tests
+
+      - name: Run Spectrum Alignment test suite
+        run: pytest -vv test_spectrumalignment.py
+        working-directory: tests
