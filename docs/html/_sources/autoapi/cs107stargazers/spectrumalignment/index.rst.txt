@@ -1,0 +1,32 @@
+:py:mod:`cs107stargazers.spectrumalignment`
+===========================================
+
+.. py:module:: cs107stargazers.spectrumalignment
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cs107stargazers.spectrumalignment.SpectrumAlignment
+
+
+
+
+.. py:class:: SpectrumAlignment(query_obj)
+
+
+   .. py:method:: _create_common_range(spectra_data)
+
+
+   .. py:method:: _interpolate_spectrum(wavelengths, flux_values)
+
+
+   .. py:method:: align_wavelengths(spectra_data)
+
+
+

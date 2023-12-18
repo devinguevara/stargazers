@@ -1,0 +1,91 @@
+:py:mod:`cs107stargazers.visualization`
+=======================================
+
+.. py:module:: cs107stargazers.visualization
+
+.. autoapi-nested-parse::
+
+   SDSS Spectral Visualization Module
+
+   This module provides tools for visualizing spectral data from the Sloan Digital Sky Survey (SDSS). 
+   It includes the SDSSVis class, which is designed to facilitate easy and efficient plotting of 
+   spectroscopic data. The module is built on top of the pandas and matplotlib libraries, leveraging 
+   their capabilities for data handling and visualization.
+
+   Classes:
+   --------
+   SDSSVis : A class designed for plotting SDSS spectroscopic data. It provides methods to plot 
+   spectral data and overlay inferred continuum data for comparative analysis.
+
+   The module expects data in the form of a pandas DataFrame with specific columns for wavelength, 
+   flux, and optionally, inferred continuum. It simplifies the process of creating insightful 
+   visualizations for the analysis of spectral data.
+
+   Dependencies:
+   -------------
+   - pandas
+   - matplotlib
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cs107stargazers.visualization.SDSSVis
+
+
+
+
+.. py:class:: SDSSVis(data: pandas.DataFrame)
+
+
+   A class for visualizing spectroscopic data from the Sloan Digital Sky Survey (SDSS).
+
+   This class provides functionalities to plot spectral data and overlay inferred
+   continuum on the spectral plot. It is designed to work with a DataFrame that
+   contains columns for wavelength, flux, and optionally, inferred continuum.
+
+   Attributes:
+   -----------
+   data : pandas.DataFrame
+       A DataFrame containing the spectroscopic data. Expected to have columns
+       'wavelength', 'flux', and optionally 'inferred_continuum'.
+
+   Methods:
+   --------
+   spectralplot():
+       Plots a spectral graph using wavelength and flux data.
+
+   ic_overlay():
+       Plots a spectral graph with an overlay of the inferred continuum on the
+       spectral data.
+
+   .. py:method:: spectralplot()
+
+      Plots the spectral data on a graph.
+
+      This method creates a plot using 'wavelength' as the x-axis and 'flux'
+      as the y-axis. It displays the plot with appropriate labels and title.
+
+      Requires:
+      - The 'data' attribute must contain 'wavelength' and 'flux' columns.
+
+
+   .. py:method:: ic_overlay()
+
+      Plots the spectral data with an overlay of the inferred continuum.
+
+      This method creates a plot similar to spectralplot but with an additional
+      line representing the inferred continuum (if available). It includes a legend
+      to distinguish between the spectral data and the inferred continuum.
+
+      Requires:
+      - The 'data' attribute must contain 'wavelength', 'flux', and 'inferred_continuum' columns.
+
+
+

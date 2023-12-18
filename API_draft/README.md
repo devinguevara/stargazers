@@ -16,9 +16,9 @@
     * Method: `redshift_correlation()` # redshift data
 
 * Metadata Extraction Module: 
-  * `class MetadataExtraction`
-    * Method: `get_attribute(attribute)` where attribute can be identifiers, coordinates, chemical abundances, redshifts, or other fields as requested by   
-    * end-user : Return information on attribute provided as argument by user
+  * `class MetadataExtractor`
+    * Method: `extract_specific_field(field_name)` where field_name can be identifiers, coordinates, chemical abundances, redshifts, or other fields as requested by end-user : Returns information on field_name provided as argument by user
+    * Method: `extract_metadata(fields)` : Returns information on the list of fields provided as argument by user
 
 * Alignment in Wavelength Module
   * `class Wavelength` 

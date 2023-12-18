@@ -1,0 +1,156 @@
+:py:mod:`cs107stargazers.preprocessing`
+=======================================
+
+.. py:module:: cs107stargazers.preprocessing
+
+.. autoapi-nested-parse::
+
+   Astronomical Data Preprocessing Module
+
+   This module provides a set of tools for preprocessing astronomical data, particularly from the Sloan Digital Sky Survey (SDSS). 
+   It includes the 'Preprocessing' class, which offers methods for data normalization, outlier removal, interpolation, 
+   and calculating redshift correlations. These methods are essential for preparing astronomical data for further analysis 
+   and research. The module relies on pandas, numpy, and scikit-learn libraries to perform various data manipulation tasks.
+
+   Classes:
+   --------
+   Preprocessing: A class for preprocessing astronomical data frames.
+
+   Dependencies:
+   -------------
+   - pandas
+   - numpy
+   - sklearn
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cs107stargazers.preprocessing.Preprocessing
+
+
+
+
+.. py:class:: Preprocessing(data: pandas.DataFrame)
+
+
+   A class for preprocessing astronomical data frames.
+
+   This class provides methods for data normalization, outlier removal, interpolation, and
+   calculating redshift correlations. It is intended to work with pandas DataFrame objects
+   containing astronomical data.
+
+   Attributes:
+   -----------
+   data : pandas.DataFrame
+       The DataFrame containing the astronomical data to be processed.
+
+   Methods:
+   --------
+   normalize(replace=False):
+       Normalizes numerical columns in the data frame.
+
+   rm_outlier(replace=False, threshold=2.5):
+       Removes outliers from the data frame based on a z-score threshold.
+
+   interpolate(x_to_interpolate, y_col, x_col, n_neighbors=3, replace=False):
+       Performs k-nearest neighbors interpolation on the specified columns.
+
+   get_redshift_corr(col):
+       Calculates the correlation coefficient between a given column and the redshift.
+
+   .. py:method:: normalize(replace=False)
+
+      Normalizes the numerical columns in the DataFrame.
+
+      Parameters:
+      -----------
+      replace : bool, optional
+          If True, replaces the original data with the normalized data.
+
+      Returns:
+      --------
+      pandas.DataFrame or None
+          Returns a new DataFrame with normalized data if replace is False,
+          otherwise updates self.data and returns None.
+
+
+   .. py:method:: rm_outlier(replace=False, threshold=2.5)
+
+      Removes outliers from the DataFrame based on a z-score threshold.
+
+      Parameters:
+      -----------
+      replace : bool, optional
+          If True, replaces the original data with the outlier-removed data.
+
+      threshold : float, optional
+          The z-score threshold used to define an outlier.
+
+      Returns:
+      --------
+      pandas.DataFrame or None
+          Returns a new DataFrame with outliers removed if replace is False,
+          otherwise updates self.data and returns None.
+
+
+   .. py:method:: interpolate(x_to_interpolate, y_col, x_col, n_neighbors=3, replace=False)
+
+      Performs k-nearest neighbors interpolation on the specified columns.
+
+      Parameters:
+      -----------
+      x_to_interpolate : list or array-like
+          The x-values for which y-values need to be interpolated.
+
+      y_col : str
+          The column name of the dependent variable.
+
+      x_col : str
+          The column name of the independent variable.
+
+      n_neighbors : int, optional
+          The number of neighbors to use for k-nearest neighbors.
+
+      replace : bool, optional
+          If True, appends the interpolated results to self.data.
+
+      Returns:
+      --------
+      pandas.DataFrame or None
+          Returns a new DataFrame with interpolated values if replace is False,
+          otherwise updates self.data and returns None.
+
+      Raises:
+      -------
+      ValueError
+          If the specified columns are not found in the DataFrame or x_to_interpolate is empty.
+
+
+   .. py:method:: get_redshift_corr(col: str)
+
+      Calculates the correlation coefficient between a specified column and the redshift.
+
+      Parameters:
+      -----------
+      col : str
+          The column name to calculate correlation with the redshift column 'z'.
+
+      Returns:
+      --------
+      float
+          The correlation coefficient between the specified column and redshift.
+
+      Raises:
+      -------
+      ValueError
+          If the specified column is not found or the redshift column 'z' is missing.
+
+
+
