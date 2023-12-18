@@ -17,9 +17,17 @@ classifiers = [
 ]
 description = "A package for Astronomical research."
 name = "cs107stargazers"
-readme = "README.md"
+readme = "API_draft/README.md"
 requires-python = ">=3.10"
-version = "0.0.2"
+version = "0.0.3"
+dependencies = [
+    "numpy",
+    "pandas",
+    "differint",
+    "astroquery",
+    "scikit-learn",
+    "matplotlib",
+]
 
 [project.urls]
 "Bug Tracker" = "https://code.harvard.edu/CS107/team27_2023/issues"

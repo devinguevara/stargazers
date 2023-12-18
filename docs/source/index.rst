@@ -7,10 +7,10 @@ Welcome to cs107stargazers's documentation!
 ===========================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :caption: Contents:
 
-
+   cs107stargazers
 
 Indices and tables
 ==================
