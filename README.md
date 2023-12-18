@@ -5,9 +5,5 @@
 
 ## Self-Evaluations:
 
-#### Devin Guevara 
-1. I spent about 20 hours working on this project. I created the query, preprocessing, and test_integration functionalities. I asisted in the planning of this project, as well with the set up of the remote repository. I also helped others improve and develop their code as needed. 
-
-
 #### Samia Afrose 
 1. I spent about 18-22 hours working on this project. I created the visualization module and integration test for it. I helped in the project planning and assignements. I completed all the tasks assigned to me after we divided them in our meetings. I helped my peers when requested.
