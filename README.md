@@ -14,3 +14,5 @@
 #### Ali Khan
 1. I spent around 8 hours working on this project. I create the visualization module and integration test for it. 
 
+#### Elena Jauregui
+1. I spend around 20 hours working on this project. I created the augment and ml_stargazer modules, as well as their test files and .yml files. I assisted in the planning and coordination of this project. 
