@@ -55,3 +55,30 @@ jobs:
         with:
           name: ml_stargazer-coverage-report
           path: tests/ml_stargazer_htmlcov/
+
+      - name: Run Query module test coverage analysis
+        run: pytest -vv test_query.py --cov --cov-report=html:query_htmlcov
+        working-directory: tests
+      - name: Archive coverage reports as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: query-coverage-report
+          path: tests/query_htmlcov/
+
+      - name: Run Preprocessing module test coverage analysis
+        run: pytest -vv test_preprocessing.py --cov --cov-report=html:preprocessing_htmlcov
+        working-directory: tests
+      - name: Archive coverage reports as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: preprocessing-coverage-report
+          path: tests/preprocessing_htmlcov/
+
+      - name: Run Spectrum Alignment module test coverage analysis
+        run: pytest -vv test_spectrumalignment.py --cov --cov-report=html:spectrumalignment_htmlcov
+        working-directory: tests
+      - name: Archive coverage reports as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: spectrumalignment-coverage-report
+          path: tests/spectrumalignment_htmlcov/
