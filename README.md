@@ -17,4 +17,4 @@ python3 -m pip install --index-url https://test.pypi.org/simple/ --extra-index-u
 
 To use this package, you may import it's modules. Detailed documentaion can be found in the `docs` folder, inside the `html` folder. To access the documentation, open the `index.html` file in your browser.
 
-Detailed demonstration of the package can be found on the dev branch in the `cs107stargazers_Samia_Elena_Devin_Ali_Innocent.ipynb` file in the `tutorial/`. A pdf version of this file is provided as well.
+Detailed demonstration of the package can be found on the dev branch in the `cs107stargazers_Samia_Elena_Devin_Ali_Innocent.ipynb` file in the `tutorial/`. A pdf version of this file is provided as well. ⚠️ Be sure to be in the `dev` branch to access the `tutorial` directory!
