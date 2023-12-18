@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cs107stargazers.query &#8212; cs107stargazers v0.0.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=039e1c02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=eafc0fe6" />
+    <script src="../../../_static/documentation_options.js?v=bc6a6d3b"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="cs107stargazers.spectrumalignment" href="../spectrumalignment/index.html" />
+    <link rel="prev" title="cs107stargazers.preprocessing" href="../preprocessing/index.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-cs107stargazers.query">
+<span id="cs107stargazers-query"></span><h1><a class="reference internal" href="../../../cs107stargazers.html#module-cs107stargazers.query" title="cs107stargazers.query"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.query</span></code></a><a class="headerlink" href="#module-cs107stargazers.query" title="Link to this heading">¶</a></h1>
+<p>SDSS Database Query Module</p>
+<p>This module is designed to facilitate querying the Sloan Digital Sky Survey (SDSS) database using
+the Astronomical Data Query Language (ADQL). It provides a simple yet powerful interface for
+astronomers and astrophysicists to retrieve astronomical data for analysis. The module leverages
+the capabilities of the ‘astroquery.sdss’ library and Pandas to handle and manipulate the queried data.</p>
+<p>The core of this module is the <cite>Query</cite> class, which allows users to execute ADQL queries and
+retrieve results in various formats, including Pandas DataFrames and Astropy Tables. This class
+handles the complexities of database connectivity and query execution, providing a user-friendly
+interface for data retrieval.</p>
+<section id="classes">
+<h2>Classes:<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>Query<span class="classifier">A class that encapsulates ADQL queries to the SDSS database. It provides methods to</span></dt><dd><p>execute queries and retrieve results in different formats.</p>
+</dd>
+</dl>
+<p>The module assumes that the user has basic knowledge of ADQL and the structure of the SDSS database.
+It is intended for use in astronomical research and education, providing a straightforward way to
+access one of the most comprehensive astronomical databases available.</p>
+</section>
+<section id="example">
+<h2>Example:<a class="headerlink" href="#example" title="Link to this heading">¶</a></h2>
+<p>To use this module, simply import it along with the required ‘astroquery.sdss’ and ‘pandas’ libraries.
+Create an instance of the Query class with your ADQL query, and use the provided methods to retrieve
+and manipulate the data:</p>
+<p># Import the required libraries and this module.</p>
+<p># Example ADQL query
+query_string = “SELECT TOP 10 * FROM specObj WHERE class = ‘GALAXY’”</p>
+<p># Create a Query instance
+query = Query(query_string)</p>
+<p># Retrieve the result as a Pandas DataFrame
+data_frame = query.get_df()</p>
+<p># Alternatively, retrieve the result as an Astropy Table
+astro_table = query.get_table()</p>
+<p># Or simply print the query result
+query.print()</p>
+</section>
+<section id="dependencies">
+<h2>Dependencies:<a class="headerlink" href="#dependencies" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>astroquery</p></li>
+<li><p>pandas</p></li>
+</ul>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<section id="id1">
+<h3>Classes<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../cs107stargazers.html#cs107stargazers.query.Query" title="cs107stargazers.query.Query"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Query</span></code></a></p></td>
+<td><p>A class for querying the Sloan Digital Sky Survey (SDSS) database using ADQL (Astronomical Data Query Language).</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="cs107stargazers.query.Query">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cs107stargazers.query.</span></span><span class="sig-name descname"><span class="pre">Query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ADQL_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.query.Query" title="Link to this definition">¶</a></dt>
+<dd><p>A class for querying the Sloan Digital Sky Survey (SDSS) database using ADQL (Astronomical Data Query Language).</p>
+<p>This class provides methods to execute ADQL queries against the SDSS database and retrieve results
+in different formats such as pandas DataFrame, Astropy Table, or simply print the results.</p>
+<section id="attributes">
+<h4>Attributes:<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>ADQL_string<span class="classifier">str</span></dt><dd><p>The ADQL query string to be executed against the SDSS database.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h4>Methods:<a class="headerlink" href="#methods" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>get_df():</dt><dd><p>Executes the ADQL query and returns the result as a pandas DataFrame.</p>
+</dd>
+<dt>get_table():</dt><dd><p>Executes the ADQL query and returns the result as an Astropy Table.</p>
+</dd>
+<dt>print():</dt><dd><p>Executes the ADQL query and prints the result.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.query.Query.get_df">
+<span class="sig-name descname"><span class="pre">get_df</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.query.Query.get_df" title="Link to this definition">¶</a></dt>
+<dd><p>Executes the stored ADQL query and returns the results as a pandas DataFrame.</p>
+<section id="returns">
+<h5>Returns:<a class="headerlink" href="#returns" title="Link to this heading">¶</a></h5>
+<dl class="simple">
+<dt>pandas.DataFrame</dt><dd><p>A DataFrame containing the query results.</p>
+</dd>
+</dl>
+</section>
+<section id="raises">
+<h5>Raises:<a class="headerlink" href="#raises" title="Link to this heading">¶</a></h5>
+<dl class="simple">
+<dt>Exception</dt><dd><p>If an error occurs during the query execution or data conversion.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.query.Query.get_table">
+<span class="sig-name descname"><span class="pre">get_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.query.Query.get_table" title="Link to this definition">¶</a></dt>
+<dd><p>Executes the stored ADQL query and returns the results as an Astropy Table.</p>
+<section id="id2">
+<h5>Returns:<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h5>
+<dl class="simple">
+<dt>astropy.table.Table</dt><dd><p>An Astropy Table containing the query results.</p>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h5>Raises:<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h5>
+<dl class="simple">
+<dt>Exception</dt><dd><p>If an error occurs during the query execution.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.query.Query.print">
+<span class="sig-name descname"><span class="pre">print</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.query.Query.print" title="Link to this definition">¶</a></dt>
+<dd><p>Executes the stored ADQL query and prints the results.</p>
+<p>This method is useful for quick checks or debugging purposes.</p>
+<section id="id4">
+<h5>Raises:<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h5>
+<dl class="simple">
+<dt>Exception</dt><dd><p>If an error occurs during the query execution.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">cs107stargazers</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../cs107stargazers.html">cs107stargazers Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../augment/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.augment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../metadata_extraction/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.metadata_extraction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml_stargazer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.ml_stargazer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../preprocessing/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.preprocessing</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.query</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../spectrumalignment/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.spectrumalignment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.visualization</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">API Reference</a><ul>
+  <li><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers</span></code></a><ul>
+      <li>Previous: <a href="../preprocessing/index.html" title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.preprocessing</span></code></a></li>
+      <li>Next: <a href="../spectrumalignment/index.html" title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.spectrumalignment</span></code></a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Elena Jauregui, Devin Guevara, Samia Afrose, Ali Khan, Innocent Munai.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="../../../_sources/autoapi/cs107stargazers/query/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

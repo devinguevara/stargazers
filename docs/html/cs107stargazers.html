@@ -1,0 +1,951 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>cs107stargazers Documentation &#8212; cs107stargazers v0.0.3 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cs107stargazers';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to cs107stargazers’s documentation!" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">cs107stargazers v0.0.3 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">cs107stargazers Documentation</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/cs107stargazers.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>cs107stargazers Documentation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.query.Query"><code class="docutils literal notranslate"><span class="pre">Query</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.query.Query.get_df"><code class="docutils literal notranslate"><span class="pre">Query.get_df()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.query.Query.get_table"><code class="docutils literal notranslate"><span class="pre">Query.get_table()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.query.Query.print"><code class="docutils literal notranslate"><span class="pre">Query.print()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Classes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Dependencies:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.preprocessing.Preprocessing"><code class="docutils literal notranslate"><span class="pre">Preprocessing</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.preprocessing.Preprocessing.get_redshift_corr"><code class="docutils literal notranslate"><span class="pre">Preprocessing.get_redshift_corr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.preprocessing.Preprocessing.interpolate"><code class="docutils literal notranslate"><span class="pre">Preprocessing.interpolate()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.preprocessing.Preprocessing.normalize"><code class="docutils literal notranslate"><span class="pre">Preprocessing.normalize()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.preprocessing.Preprocessing.rm_outlier"><code class="docutils literal notranslate"><span class="pre">Preprocessing.rm_outlier()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.metadata_extraction.MetadataExtractor"><code class="docutils literal notranslate"><span class="pre">MetadataExtractor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.metadata_extraction.MetadataExtractor.extract_metadata"><code class="docutils literal notranslate"><span class="pre">MetadataExtractor.extract_metadata()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.metadata_extraction.MetadataExtractor.extract_specific_field"><code class="docutils literal notranslate"><span class="pre">MetadataExtractor.extract_specific_field()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.augment.Augment"><code class="docutils literal notranslate"><span class="pre">Augment</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.augment.Augment.derive"><code class="docutils literal notranslate"><span class="pre">Augment.derive()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.augment.Augment.fractional_derive"><code class="docutils literal notranslate"><span class="pre">Augment.fractional_derive()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Classes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Dependencies:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.visualization.SDSSVis"><code class="docutils literal notranslate"><span class="pre">SDSSVis</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.visualization.SDSSVis.ic_overlay"><code class="docutils literal notranslate"><span class="pre">SDSSVis.ic_overlay()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.visualization.SDSSVis.spectralplot"><code class="docutils literal notranslate"><span class="pre">SDSSVis.spectralplot()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.ml_stargazer.Ml_stargazer"><code class="docutils literal notranslate"><span class="pre">Ml_stargazer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.ml_stargazer.Ml_stargazer.fit"><code class="docutils literal notranslate"><span class="pre">Ml_stargazer.fit()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.ml_stargazer.Ml_stargazer.predict"><code class="docutils literal notranslate"><span class="pre">Ml_stargazer.predict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.ml_stargazer.Ml_stargazer.predict_prob"><code class="docutils literal notranslate"><span class="pre">Ml_stargazer.predict_prob()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="module-cs107stargazers.query">
+<span id="cs107stargazers-documentation"></span><h1>cs107stargazers Documentation<a class="headerlink" href="#module-cs107stargazers.query" title="Permalink to this heading">#</a></h1>
+<p>SDSS Database Query Module</p>
+<p>This module is designed to facilitate querying the Sloan Digital Sky Survey (SDSS) database using
+the Astronomical Data Query Language (ADQL). It provides a simple yet powerful interface for
+astronomers and astrophysicists to retrieve astronomical data for analysis. The module leverages
+the capabilities of the ‘astroquery.sdss’ library and Pandas to handle and manipulate the queried data.</p>
+<p>The core of this module is the <cite>Query</cite> class, which allows users to execute ADQL queries and
+retrieve results in various formats, including Pandas DataFrames and Astropy Tables. This class
+handles the complexities of database connectivity and query execution, providing a user-friendly
+interface for data retrieval.</p>
+<section id="classes">
+<h2>Classes:<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h2>
+<dl class="simple">
+<dt>Query<span class="classifier">A class that encapsulates ADQL queries to the SDSS database. It provides methods to</span></dt><dd><p>execute queries and retrieve results in different formats.</p>
+</dd>
+</dl>
+<p>The module assumes that the user has basic knowledge of ADQL and the structure of the SDSS database.
+It is intended for use in astronomical research and education, providing a straightforward way to
+access one of the most comprehensive astronomical databases available.</p>
+</section>
+<section id="example">
+<h2>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h2>
+<p>To use this module, simply import it along with the required ‘astroquery.sdss’ and ‘pandas’ libraries.
+Create an instance of the Query class with your ADQL query, and use the provided methods to retrieve
+and manipulate the data:</p>
+<p># Import the required libraries and this module.</p>
+<p># Example ADQL query
+query_string = “SELECT TOP 10 * FROM specObj WHERE class = ‘GALAXY’”</p>
+<p># Create a Query instance
+query = Query(query_string)</p>
+<p># Retrieve the result as a Pandas DataFrame
+data_frame = query.get_df()</p>
+<p># Alternatively, retrieve the result as an Astropy Table
+astro_table = query.get_table()</p>
+<p># Or simply print the query result
+query.print()</p>
+</section>
+<section id="dependencies">
+<h2>Dependencies:<a class="headerlink" href="#dependencies" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>astroquery</p></li>
+<li><p>pandas</p></li>
+</ul>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="cs107stargazers.query.Query">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cs107stargazers.query.</span></span><span class="sig-name descname"><span class="pre">Query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ADQL_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.query.Query" title="Permalink to this definition">#</a></dt>
+<dd><p>A class for querying the Sloan Digital Sky Survey (SDSS) database using ADQL (Astronomical Data Query Language).</p>
+<p>This class provides methods to execute ADQL queries against the SDSS database and retrieve results
+in different formats such as pandas DataFrame, Astropy Table, or simply print the results.</p>
+<section id="attributes">
+<h2>Attributes:<a class="headerlink" href="#attributes" title="Permalink to this heading">#</a></h2>
+<dl class="simple">
+<dt>ADQL_string<span class="classifier">str</span></dt><dd><p>The ADQL query string to be executed against the SDSS database.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h2>Methods:<a class="headerlink" href="#methods" title="Permalink to this heading">#</a></h2>
+<dl class="simple">
+<dt>get_df():</dt><dd><p>Executes the ADQL query and returns the result as a pandas DataFrame.</p>
+</dd>
+<dt>get_table():</dt><dd><p>Executes the ADQL query and returns the result as an Astropy Table.</p>
+</dd>
+<dt>print():</dt><dd><p>Executes the ADQL query and prints the result.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.query.Query.get_df">
+<span class="sig-name descname"><span class="pre">get_df</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.query.Query.get_df" title="Permalink to this definition">#</a></dt>
+<dd><p>Executes the stored ADQL query and returns the results as a pandas DataFrame.</p>
+<section id="returns">
+<h3>Returns:<a class="headerlink" href="#returns" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>pandas.DataFrame</dt><dd><p>A DataFrame containing the query results.</p>
+</dd>
+</dl>
+</section>
+<section id="raises">
+<h3>Raises:<a class="headerlink" href="#raises" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>Exception</dt><dd><p>If an error occurs during the query execution or data conversion.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.query.Query.get_table">
+<span class="sig-name descname"><span class="pre">get_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.query.Query.get_table" title="Permalink to this definition">#</a></dt>
+<dd><p>Executes the stored ADQL query and returns the results as an Astropy Table.</p>
+<section id="id1">
+<h3>Returns:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>astropy.table.Table</dt><dd><p>An Astropy Table containing the query results.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>Raises:<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>Exception</dt><dd><p>If an error occurs during the query execution.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.query.Query.print">
+<span class="sig-name descname"><span class="pre">print</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.query.Query.print" title="Permalink to this definition">#</a></dt>
+<dd><p>Executes the stored ADQL query and prints the results.</p>
+<p>This method is useful for quick checks or debugging purposes.</p>
+<section id="id3">
+<h3>Raises:<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>Exception</dt><dd><p>If an error occurs during the query execution.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<span class="target" id="module-cs107stargazers.preprocessing"></span><p>Astronomical Data Preprocessing Module</p>
+<p>This module provides a set of tools for preprocessing astronomical data, particularly from the Sloan Digital Sky Survey (SDSS). 
+It includes the ‘Preprocessing’ class, which offers methods for data normalization, outlier removal, interpolation, 
+and calculating redshift correlations. These methods are essential for preparing astronomical data for further analysis 
+and research. The module relies on pandas, numpy, and scikit-learn libraries to perform various data manipulation tasks.</p>
+<section id="id4">
+<h2>Classes:<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<p>Preprocessing: A class for preprocessing astronomical data frames.</p>
+</section>
+<section id="id5">
+<h2>Dependencies:<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>pandas</p></li>
+<li><p>numpy</p></li>
+<li><p>sklearn</p></li>
+</ul>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="cs107stargazers.preprocessing.Preprocessing">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cs107stargazers.preprocessing.</span></span><span class="sig-name descname"><span class="pre">Preprocessing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.preprocessing.Preprocessing" title="Permalink to this definition">#</a></dt>
+<dd><p>A class for preprocessing astronomical data frames.</p>
+<p>This class provides methods for data normalization, outlier removal, interpolation, and
+calculating redshift correlations. It is intended to work with pandas DataFrame objects
+containing astronomical data.</p>
+<section id="id6">
+<h2>Attributes:<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<dl class="simple">
+<dt>data<span class="classifier">pandas.DataFrame</span></dt><dd><p>The DataFrame containing the astronomical data to be processed.</p>
+</dd>
+</dl>
+</section>
+<section id="id7">
+<h2>Methods:<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<dl class="simple">
+<dt>normalize(replace=False):</dt><dd><p>Normalizes numerical columns in the data frame.</p>
+</dd>
+<dt>rm_outlier(replace=False, threshold=2.5):</dt><dd><p>Removes outliers from the data frame based on a z-score threshold.</p>
+</dd>
+<dt>interpolate(x_to_interpolate, y_col, x_col, n_neighbors=3, replace=False):</dt><dd><p>Performs k-nearest neighbors interpolation on the specified columns.</p>
+</dd>
+<dt>get_redshift_corr(col):</dt><dd><p>Calculates the correlation coefficient between a given column and the redshift.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.preprocessing.Preprocessing.get_redshift_corr">
+<span class="sig-name descname"><span class="pre">get_redshift_corr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.preprocessing.Preprocessing.get_redshift_corr" title="Permalink to this definition">#</a></dt>
+<dd><p>Calculates the correlation coefficient between a specified column and the redshift.</p>
+<section id="parameters">
+<h3>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>col<span class="classifier">str</span></dt><dd><p>The column name to calculate correlation with the redshift column ‘z’.</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h3>Returns:<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>float</dt><dd><p>The correlation coefficient between the specified column and redshift.</p>
+</dd>
+</dl>
+</section>
+<section id="id9">
+<h3>Raises:<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>ValueError</dt><dd><p>If the specified column is not found or the redshift column ‘z’ is missing.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.preprocessing.Preprocessing.interpolate">
+<span class="sig-name descname"><span class="pre">interpolate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_to_interpolate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_neighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.preprocessing.Preprocessing.interpolate" title="Permalink to this definition">#</a></dt>
+<dd><p>Performs k-nearest neighbors interpolation on the specified columns.</p>
+<section id="id10">
+<h3>Parameters:<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>x_to_interpolate<span class="classifier">list or array-like</span></dt><dd><p>The x-values for which y-values need to be interpolated.</p>
+</dd>
+<dt>y_col<span class="classifier">str</span></dt><dd><p>The column name of the dependent variable.</p>
+</dd>
+<dt>x_col<span class="classifier">str</span></dt><dd><p>The column name of the independent variable.</p>
+</dd>
+<dt>n_neighbors<span class="classifier">int, optional</span></dt><dd><p>The number of neighbors to use for k-nearest neighbors.</p>
+</dd>
+<dt>replace<span class="classifier">bool, optional</span></dt><dd><p>If True, appends the interpolated results to self.data.</p>
+</dd>
+</dl>
+</section>
+<section id="id11">
+<h3>Returns:<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>pandas.DataFrame or None</dt><dd><p>Returns a new DataFrame with interpolated values if replace is False,
+otherwise updates self.data and returns None.</p>
+</dd>
+</dl>
+</section>
+<section id="id12">
+<h3>Raises:<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>ValueError</dt><dd><p>If the specified columns are not found in the DataFrame or x_to_interpolate is empty.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.preprocessing.Preprocessing.normalize">
+<span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.preprocessing.Preprocessing.normalize" title="Permalink to this definition">#</a></dt>
+<dd><p>Normalizes the numerical columns in the DataFrame.</p>
+<section id="id13">
+<h3>Parameters:<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>replace<span class="classifier">bool, optional</span></dt><dd><p>If True, replaces the original data with the normalized data.</p>
+</dd>
+</dl>
+</section>
+<section id="id14">
+<h3>Returns:<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>pandas.DataFrame or None</dt><dd><p>Returns a new DataFrame with normalized data if replace is False,
+otherwise updates self.data and returns None.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.preprocessing.Preprocessing.rm_outlier">
+<span class="sig-name descname"><span class="pre">rm_outlier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.preprocessing.Preprocessing.rm_outlier" title="Permalink to this definition">#</a></dt>
+<dd><p>Removes outliers from the DataFrame based on a z-score threshold.</p>
+<section id="id15">
+<h3>Parameters:<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>replace<span class="classifier">bool, optional</span></dt><dd><p>If True, replaces the original data with the outlier-removed data.</p>
+</dd>
+<dt>threshold<span class="classifier">float, optional</span></dt><dd><p>The z-score threshold used to define an outlier.</p>
+</dd>
+</dl>
+</section>
+<section id="id16">
+<h3>Returns:<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>pandas.DataFrame or None</dt><dd><p>Returns a new DataFrame with outliers removed if replace is False,
+otherwise updates self.data and returns None.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<span class="target" id="module-cs107stargazers.metadata_extraction"></span><p>A module to extract metadata.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cs107stargazers.metadata_extraction.MetadataExtractor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cs107stargazers.metadata_extraction.</span></span><span class="sig-name descname"><span class="pre">MetadataExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.metadata_extraction.MetadataExtractor" title="Permalink to this definition">#</a></dt>
+<dd><p>Metadata Extractor.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.metadata_extraction.MetadataExtractor.extract_metadata">
+<span class="sig-name descname"><span class="pre">extract_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cs107stargazers.metadata_extraction.MetadataExtractor.extract_metadata" title="Permalink to this definition">#</a></dt>
+<dd><p>Extracts specified metadata fields from the dataset.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>fields (list): A list of strings representing the metadata fields to extract.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: When any of the fields is missing in the data.</p>
+</dd>
+<dt>Returns:</dt><dd><p>pd.DataFrame: A DataFrame containing the extracted metadata.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.metadata_extraction.MetadataExtractor.extract_specific_field">
+<span class="sig-name descname"><span class="pre">extract_specific_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="headerlink" href="#cs107stargazers.metadata_extraction.MetadataExtractor.extract_specific_field" title="Permalink to this definition">#</a></dt>
+<dd><p>Extracts a specific metadata field from the dataset.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>field_name (str): The name of the field to extract.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: When a field is missing in the data.</p>
+</dd>
+<dt>Returns:</dt><dd><p>pd.Series: A Series containing the values of the specified field.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-cs107stargazers.augment"></span><p>The <cite>augment</cite> module is designed for time series analysis, specifically focusing on the computation of derivatives and fractional derivatives (differintegrals) of time series data. It primarily consists of the Augment class, which offers encapsulated functions for these computations on Pandas DataFrames.</p>
+<p>Key Features:
+- Compute standard time series derivatives using the <cite>derive</cite> method of the Augment class.
+- Compute fractional derivatives (differintegrals) using the <cite>fractional_derive</cite> method.
+- Flexible handling of data columns, allowing selective computation of derivatives on specific subsets of the data.</p>
+<p>Note:
+- The module assumes the input data is pre-processed and formatted as a Pandas DataFrame.
+- The accuracy of derivative computations may be affected by incomplete or missing data in the DataFrame.</p>
+<p>Dependencies:
+- numpy
+- pandas
+- differint</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cs107stargazers.augment.Augment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cs107stargazers.augment.</span></span><span class="sig-name descname"><span class="pre">Augment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.augment.Augment" title="Permalink to this definition">#</a></dt>
+<dd><p>The Augment class provides methods for computing time series derivatives and fractional derivatives.</p>
+<p>This class is designed to work with time series data represented in a Pandas DataFrame. It includes methods to compute
+both standard and fractional derivatives (differintegrals) of the data. The expected input for creating an instance
+of this class is a DataFrame with each column representing a time series for a specific variable. Rows should correspond
+to different time points or indices. The class offers two main methods: <cite>derive</cite> and <cite>fractional_derive</cite>.</p>
+<dl class="simple">
+<dt>Methods:</dt><dd><dl class="simple">
+<dt>derive: Computes the standard derivative of the time series. Optional parameters allow for the selection of specific</dt><dd><p>columns for which the derivative should be computed.</p>
+</dd>
+<dt>fractional_derive: Computes the fractional derivative (differintegral) of the time series. Requires the order of</dt><dd><p>the differintegral to be specified. Optional parameters include column selection and domain settings
+for the differintegral computation.</p>
+</dd>
+</dl>
+</dd>
+<dt>Note:</dt><dd><p>This class assumes the input DataFrame is pre-processed and ready for derivative computations. Missing data in the
+DataFrame may affect the ability of the methods to accurately compute derivatives.</p>
+</dd>
+<dt>Parameters:</dt><dd><p>df_p (pandas.DataFrame): A pre-processed DataFrame where each column represents a time series of a variable.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.augment.Augment.derive">
+<span class="sig-name descname"><span class="pre">derive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notrun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.augment.Augment.derive" title="Permalink to this definition">#</a></dt>
+<dd><p>Computes the derivative of time series data in the DataFrame.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>run (list of str, optional): Column names for which the derivative is to be computed. If None, derivatives for all columns are computed.
+notrun (list of str, optional): Column names for which the derivative should not be computed. Ignored if ‘run’ is specified.</p>
+</dd>
+<dt>Returns:</dt><dd><p>pandas.DataFrame: A DataFrame including original columns and their corresponding derivative columns.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.augment.Augment.fractional_derive">
+<span class="sig-name descname"><span class="pre">fractional_derive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frac</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notrun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain_end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.augment.Augment.fractional_derive" title="Permalink to this definition">#</a></dt>
+<dd><p>Computes the fractional derivative (differintegral) of time series data in the DataFrame.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>frac (float): The order of the differintegral to be computed.
+run (list of str, optional): Column names for which the differintegral is to be computed. If None, differintegrals for all columns are computed.
+notrun (list of str, optional): Column names for which the differintegral should not be computed. Ignored if ‘run’ is specified.
+domain_start (numeric, optional): The start of the domain for the differintegral computation.
+domain_end (numeric, optional): The end of the domain for the differintegral computation.</p>
+</dd>
+<dt>Returns:</dt><dd><p>pandas.DataFrame: A DataFrame including original columns and their corresponding differintegral columns.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-cs107stargazers.spectrumalignment"></span><span class="target" id="module-cs107stargazers.visualization"></span><p>SDSS Spectral Visualization Module</p>
+<p>This module provides tools for visualizing spectral data from the Sloan Digital Sky Survey (SDSS). 
+It includes the SDSSVis class, which is designed to facilitate easy and efficient plotting of 
+spectroscopic data. The module is built on top of the pandas and matplotlib libraries, leveraging 
+their capabilities for data handling and visualization.</p>
+<section id="id17">
+<h2>Classes:<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h2>
+<p>SDSSVis : A class designed for plotting SDSS spectroscopic data. It provides methods to plot 
+spectral data and overlay inferred continuum data for comparative analysis.</p>
+<p>The module expects data in the form of a pandas DataFrame with specific columns for wavelength, 
+flux, and optionally, inferred continuum. It simplifies the process of creating insightful 
+visualizations for the analysis of spectral data.</p>
+</section>
+<section id="id18">
+<h2>Dependencies:<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>pandas</p></li>
+<li><p>matplotlib</p></li>
+</ul>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="cs107stargazers.visualization.SDSSVis">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cs107stargazers.visualization.</span></span><span class="sig-name descname"><span class="pre">SDSSVis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.visualization.SDSSVis" title="Permalink to this definition">#</a></dt>
+<dd><p>A class for visualizing spectroscopic data from the Sloan Digital Sky Survey (SDSS).</p>
+<p>This class provides functionalities to plot spectral data and overlay inferred
+continuum on the spectral plot. It is designed to work with a DataFrame that
+contains columns for wavelength, flux, and optionally, inferred continuum.</p>
+<section id="id19">
+<h2>Attributes:<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h2>
+<dl class="simple">
+<dt>data<span class="classifier">pandas.DataFrame</span></dt><dd><p>A DataFrame containing the spectroscopic data. Expected to have columns
+‘wavelength’, ‘flux’, and optionally ‘inferred_continuum’.</p>
+</dd>
+</dl>
+</section>
+<section id="id20">
+<h2>Methods:<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h2>
+<dl class="simple">
+<dt>spectralplot():</dt><dd><p>Plots a spectral graph using wavelength and flux data.</p>
+</dd>
+<dt>ic_overlay():</dt><dd><p>Plots a spectral graph with an overlay of the inferred continuum on the
+spectral data.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.visualization.SDSSVis.ic_overlay">
+<span class="sig-name descname"><span class="pre">ic_overlay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.visualization.SDSSVis.ic_overlay" title="Permalink to this definition">#</a></dt>
+<dd><p>Plots the spectral data with an overlay of the inferred continuum.</p>
+<p>This method creates a plot similar to spectralplot but with an additional
+line representing the inferred continuum (if available). It includes a legend
+to distinguish between the spectral data and the inferred continuum.</p>
+<p>Requires:
+- The ‘data’ attribute must contain ‘wavelength’, ‘flux’, and ‘inferred_continuum’ columns.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.visualization.SDSSVis.spectralplot">
+<span class="sig-name descname"><span class="pre">spectralplot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.visualization.SDSSVis.spectralplot" title="Permalink to this definition">#</a></dt>
+<dd><p>Plots the spectral data on a graph.</p>
+<p>This method creates a plot using ‘wavelength’ as the x-axis and ‘flux’
+as the y-axis. It displays the plot with appropriate labels and title.</p>
+<p>Requires:
+- The ‘data’ attribute must contain ‘wavelength’ and ‘flux’ columns.</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<span class="target" id="module-cs107stargazers.ml_stargazer"></span><dl class="py class">
+<dt class="sig sig-object py" id="cs107stargazers.ml_stargazer.Ml_stargazer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cs107stargazers.ml_stargazer.</span></span><span class="sig-name descname"><span class="pre">Ml_stargazer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_vars</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.ml_stargazer.Ml_stargazer" title="Permalink to this definition">#</a></dt>
+<dd><p>Classify celestial objects as star/galaxy/QSO. (Spectra are most commonly used, but this class allows for increased flexibility of model-building
+and prediction.) fit() fits the model to SDSS data using the variables indicated by the user to drive prediction. predict() produces classification 
+predictions for each objectID in the df (self.df, for an ml_stargazer instance.) predict_proba() provides the probability of each of the 3 classifications for 
+each objectid in the df. Functions wrap around scikit SGClassifier(). <a class="reference external" href="https://scikit-learn.org/stable/modules/sgd.html">https://scikit-learn.org/stable/modules/sgd.html</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.ml_stargazer.Ml_stargazer.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">150</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.ml_stargazer.Ml_stargazer.fit" title="Permalink to this definition">#</a></dt>
+<dd><p>Fit the SDG Classifier model to labelled SDSS data. Model will be fit using as predictive variables the list indicated in 
+self.fit_vars. Optional arguments ra and dec allow user to specify the region from which they wish the 
+training points to be. STAR=1, GALAXY=2, OQS=3. Scikit documentation: <a class="reference external" href="https://scikit-learn.org/stable/modules/sgd.html">https://scikit-learn.org/stable/modules/sgd.html</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.ml_stargazer.Ml_stargazer.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'array'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.ml_stargazer.Ml_stargazer.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Classify objectids in self.df into 3 groups (STAR=1, GALAXY=2, QSO=3) using the SDG Classifier model
+self.SDGClassifer (fit using ml_stargazer.fit()). Optional argument output allows user to specify whether
+they would like results in array or augmented df format (i.e. appending as columns to the data being analyzed.)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.ml_stargazer.Ml_stargazer.predict_prob">
+<span class="sig-name descname"><span class="pre">predict_prob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'separate'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.ml_stargazer.Ml_stargazer.predict_prob" title="Permalink to this definition">#</a></dt>
+<dd><p>Probabilistically classify objectids in self.df into 3 groups (STAR=1, GALAXY=2, QSO=3) using the SDG Classifier model
+self.SDGClassifer (fit using ml_stargazer.fit()); output gives the probability of being in group 1, 2, or 3 for each objectid.
+Optional argument output allows user to specify whether they would like results in array or augmented df format 
+(i.e. appending as columns to the data being analyzed.)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to cs107stargazers’s documentation!</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.query.Query"><code class="docutils literal notranslate"><span class="pre">Query</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.query.Query.get_df"><code class="docutils literal notranslate"><span class="pre">Query.get_df()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.query.Query.get_table"><code class="docutils literal notranslate"><span class="pre">Query.get_table()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.query.Query.print"><code class="docutils literal notranslate"><span class="pre">Query.print()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Classes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Dependencies:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.preprocessing.Preprocessing"><code class="docutils literal notranslate"><span class="pre">Preprocessing</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.preprocessing.Preprocessing.get_redshift_corr"><code class="docutils literal notranslate"><span class="pre">Preprocessing.get_redshift_corr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.preprocessing.Preprocessing.interpolate"><code class="docutils literal notranslate"><span class="pre">Preprocessing.interpolate()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.preprocessing.Preprocessing.normalize"><code class="docutils literal notranslate"><span class="pre">Preprocessing.normalize()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.preprocessing.Preprocessing.rm_outlier"><code class="docutils literal notranslate"><span class="pre">Preprocessing.rm_outlier()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.metadata_extraction.MetadataExtractor"><code class="docutils literal notranslate"><span class="pre">MetadataExtractor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.metadata_extraction.MetadataExtractor.extract_metadata"><code class="docutils literal notranslate"><span class="pre">MetadataExtractor.extract_metadata()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.metadata_extraction.MetadataExtractor.extract_specific_field"><code class="docutils literal notranslate"><span class="pre">MetadataExtractor.extract_specific_field()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.augment.Augment"><code class="docutils literal notranslate"><span class="pre">Augment</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.augment.Augment.derive"><code class="docutils literal notranslate"><span class="pre">Augment.derive()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.augment.Augment.fractional_derive"><code class="docutils literal notranslate"><span class="pre">Augment.fractional_derive()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Classes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Dependencies:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.visualization.SDSSVis"><code class="docutils literal notranslate"><span class="pre">SDSSVis</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.visualization.SDSSVis.ic_overlay"><code class="docutils literal notranslate"><span class="pre">SDSSVis.ic_overlay()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.visualization.SDSSVis.spectralplot"><code class="docutils literal notranslate"><span class="pre">SDSSVis.spectralplot()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.ml_stargazer.Ml_stargazer"><code class="docutils literal notranslate"><span class="pre">Ml_stargazer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.ml_stargazer.Ml_stargazer.fit"><code class="docutils literal notranslate"><span class="pre">Ml_stargazer.fit()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.ml_stargazer.Ml_stargazer.predict"><code class="docutils literal notranslate"><span class="pre">Ml_stargazer.predict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cs107stargazers.ml_stargazer.Ml_stargazer.predict_prob"><code class="docutils literal notranslate"><span class="pre">Ml_stargazer.predict_prob()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Elena Jauregui, Devin Guevara, Samia Afrose, Ali Khan, Innocent Munai
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023, Elena Jauregui, Devin Guevara, Samia Afrose, Ali Khan, Innocent Munai.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

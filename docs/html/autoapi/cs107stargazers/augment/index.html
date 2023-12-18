@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cs107stargazers.augment &#8212; cs107stargazers v0.0.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=039e1c02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=eafc0fe6" />
+    <script src="../../../_static/documentation_options.js?v=bc6a6d3b"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="cs107stargazers.metadata_extraction" href="../metadata_extraction/index.html" />
+    <link rel="prev" title="cs107stargazers" href="../index.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-cs107stargazers.augment">
+<span id="cs107stargazers-augment"></span><h1><a class="reference internal" href="../../../cs107stargazers.html#module-cs107stargazers.augment" title="cs107stargazers.augment"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.augment</span></code></a><a class="headerlink" href="#module-cs107stargazers.augment" title="Link to this heading">¶</a></h1>
+<p>The <cite>augment</cite> module is designed for time series analysis, specifically focusing on the computation of derivatives and fractional derivatives (differintegrals) of time series data. It primarily consists of the Augment class, which offers encapsulated functions for these computations on Pandas DataFrames.</p>
+<p>Key Features:
+- Compute standard time series derivatives using the <cite>derive</cite> method of the Augment class.
+- Compute fractional derivatives (differintegrals) using the <cite>fractional_derive</cite> method.
+- Flexible handling of data columns, allowing selective computation of derivatives on specific subsets of the data.</p>
+<p>Note:
+- The module assumes the input data is pre-processed and formatted as a Pandas DataFrame.
+- The accuracy of derivative computations may be affected by incomplete or missing data in the DataFrame.</p>
+<p>Dependencies:
+- numpy
+- pandas
+- differint</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../cs107stargazers.html#cs107stargazers.augment.Augment" title="cs107stargazers.augment.Augment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Augment</span></code></a></p></td>
+<td><p>The Augment class provides methods for computing time series derivatives and fractional derivatives.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="cs107stargazers.augment.Augment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cs107stargazers.augment.</span></span><span class="sig-name descname"><span class="pre">Augment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.augment.Augment" title="Link to this definition">¶</a></dt>
+<dd><p>The Augment class provides methods for computing time series derivatives and fractional derivatives.</p>
+<p>This class is designed to work with time series data represented in a Pandas DataFrame. It includes methods to compute
+both standard and fractional derivatives (differintegrals) of the data. The expected input for creating an instance
+of this class is a DataFrame with each column representing a time series for a specific variable. Rows should correspond
+to different time points or indices. The class offers two main methods: <cite>derive</cite> and <cite>fractional_derive</cite>.</p>
+<dl class="simple">
+<dt>Methods:</dt><dd><dl class="simple">
+<dt>derive: Computes the standard derivative of the time series. Optional parameters allow for the selection of specific</dt><dd><p>columns for which the derivative should be computed.</p>
+</dd>
+<dt>fractional_derive: Computes the fractional derivative (differintegral) of the time series. Requires the order of</dt><dd><p>the differintegral to be specified. Optional parameters include column selection and domain settings
+for the differintegral computation.</p>
+</dd>
+</dl>
+</dd>
+<dt>Note:</dt><dd><p>This class assumes the input DataFrame is pre-processed and ready for derivative computations. Missing data in the
+DataFrame may affect the ability of the methods to accurately compute derivatives.</p>
+</dd>
+<dt>Parameters:</dt><dd><p>df_p (pandas.DataFrame): A pre-processed DataFrame where each column represents a time series of a variable.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.augment.Augment.derive">
+<span class="sig-name descname"><span class="pre">derive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notrun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.augment.Augment.derive" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the derivative of time series data in the DataFrame.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>run (list of str, optional): Column names for which the derivative is to be computed. If None, derivatives for all columns are computed.
+notrun (list of str, optional): Column names for which the derivative should not be computed. Ignored if ‘run’ is specified.</p>
+</dd>
+<dt>Returns:</dt><dd><p>pandas.DataFrame: A DataFrame including original columns and their corresponding derivative columns.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cs107stargazers.augment.Augment.fractional_derive">
+<span class="sig-name descname"><span class="pre">fractional_derive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frac</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notrun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain_end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cs107stargazers.augment.Augment.fractional_derive" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the fractional derivative (differintegral) of time series data in the DataFrame.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>frac (float): The order of the differintegral to be computed.
+run (list of str, optional): Column names for which the differintegral is to be computed. If None, differintegrals for all columns are computed.
+notrun (list of str, optional): Column names for which the differintegral should not be computed. Ignored if ‘run’ is specified.
+domain_start (numeric, optional): The start of the domain for the differintegral computation.
+domain_end (numeric, optional): The end of the domain for the differintegral computation.</p>
+</dd>
+<dt>Returns:</dt><dd><p>pandas.DataFrame: A DataFrame including original columns and their corresponding differintegral columns.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">cs107stargazers</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../cs107stargazers.html">cs107stargazers Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.augment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../metadata_extraction/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.metadata_extraction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml_stargazer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.ml_stargazer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../preprocessing/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.preprocessing</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../query/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.query</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../spectrumalignment/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.spectrumalignment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.visualization</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">API Reference</a><ul>
+  <li><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers</span></code></a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers</span></code></a></li>
+      <li>Next: <a href="../metadata_extraction/index.html" title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cs107stargazers.metadata_extraction</span></code></a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Elena Jauregui, Devin Guevara, Samia Afrose, Ali Khan, Innocent Munai.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="../../../_sources/autoapi/cs107stargazers/augment/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
