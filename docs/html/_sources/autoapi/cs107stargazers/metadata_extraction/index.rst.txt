@@ -1,0 +1,58 @@
+:py:mod:`cs107stargazers.metadata_extraction`
+=============================================
+
+.. py:module:: cs107stargazers.metadata_extraction
+
+.. autoapi-nested-parse::
+
+   A module to extract metadata.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cs107stargazers.metadata_extraction.MetadataExtractor
+
+
+
+
+.. py:class:: MetadataExtractor(data: pandas.DataFrame)
+
+
+   Metadata Extractor.
+
+   .. py:method:: extract_metadata(fields: list) -> pandas.DataFrame
+
+      Extracts specified metadata fields from the dataset.
+
+      Args:
+          fields (list): A list of strings representing the metadata fields to extract.
+
+      Raises:
+          ValueError: When any of the fields is missing in the data.
+
+      Returns:
+          pd.DataFrame: A DataFrame containing the extracted metadata.
+
+
+   .. py:method:: extract_specific_field(field_name: str) -> pandas.Series
+
+      Extracts a specific metadata field from the dataset.
+
+      Args:
+          field_name (str): The name of the field to extract.
+
+      Raises:
+          ValueError: When a field is missing in the data.
+
+      Returns:
+          pd.Series: A Series containing the values of the specified field.
+
+
+
