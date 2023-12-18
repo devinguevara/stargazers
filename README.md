@@ -16,3 +16,6 @@
 
 #### Elena Jauregui
 1. I spend around 20 hours working on this project. I created the augment and ml_stargazer modules, as well as their test files and .yml files. I assisted in the planning and coordination of this project. 
+
+#### Innocent Munai
+1. I spent about 20-22 hours working on this project. I worked on setting up the repository and file structure, implementing and testing the metadata extraction module, improving docstrings and creating sphinx documentation, setting up package build and deployment to TestPyPI.
